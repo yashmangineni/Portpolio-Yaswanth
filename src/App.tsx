@@ -110,15 +110,9 @@ const skills: Skill[] = [
       'Server-side runtime for building APIs, backend services and web applications.',
   },
 
-  
-
- ,
-
   /* =====================================================
      BUSINESS SYSTEMS
   ===================================================== */
-
-  
 
   /* =====================================================
      FRONTEND
@@ -159,8 +153,6 @@ const skills: Skill[] = [
       'Semantic structure for accessible, responsive and resilient web experiences.',
   },
 
-
-
   /* =====================================================
      DATABASE
   ===================================================== */
@@ -189,8 +181,6 @@ const skills: Skill[] = [
     description:
       'Clear API contracts that connect frontend applications with backend systems.',
   },
-
-  
 
   {
     name: 'CRUD',
