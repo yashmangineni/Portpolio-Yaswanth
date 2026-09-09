@@ -14599,3 +14599,209 @@ body {
   object-fit: contain;
   display: block;
 }
+
+/* Final viewport-safe mobile layout */
+html,
+body,
+#root {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+@media (max-width: 850px) {
+  .site-shell {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 42px;
+    min-height: auto;
+    padding: 115px 6vw 70px;
+  }
+
+  .hero-copy,
+  .hero-visual,
+  .hero-meta {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .hero-title {
+    width: 100%;
+    max-width: 100%;
+    font-size: clamp(3.2rem, 16vw, 6.5rem);
+    line-height: .86;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  .hero-title span {
+    max-width: 100%;
+  }
+
+  .hero-description {
+    max-width: 100%;
+    font-size: 1rem;
+  }
+
+  .hero-actions {
+    flex-wrap: wrap;
+    max-width: 100%;
+    gap: 14px;
+  }
+
+  .hero-actions .button {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .hero-visual {
+    justify-content: center !important;
+    min-height: 0;
+    margin-top: 0 !important;
+  }
+
+  .hero-photo {
+    width: min(100%, 430px) !important;
+    height: auto !important;
+    aspect-ratio: 4 / 5;
+    transform: none !important;
+  }
+
+  .hero-photo-content {
+    left: 18px;
+    right: 18px;
+    bottom: 70px;
+    max-width: calc(100% - 36px);
+  }
+
+  .hero-photo-content strong,
+  .hero-photo-content span {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+
+  .hero-opportunity {
+    right: 14px;
+    bottom: 14px;
+  }
+
+  .section-pad {
+    padding: 85px 6vw;
+  }
+
+  .section-grid,
+  .skill-system,
+  .project-showcase,
+  .lab-layout,
+  .contact-inner,
+  .experience-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .section-grid {
+    display: block;
+  }
+
+  .skill-orbit {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    aspect-ratio: 1;
+    transform: none !important;
+  }
+
+  .approach-grid,
+  .case-grid,
+  .contact-form-row {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .project-visual {
+    min-width: 0;
+    padding: 20px;
+  }
+
+  .project-copy,
+  .lab-state,
+  .contact-form-modal {
+    min-width: 0;
+  }
+
+  .project-title span,
+  .project-title em {
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  .footer {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .nav-wrap {
+    padding: 12px 5vw;
+  }
+
+  .brand {
+    width: 64px;
+    height: 52px;
+  }
+
+  .brand-logo {
+    width: 56px;
+    height: 56px;
+  }
+
+  .hero {
+    padding: 95px 5vw 60px;
+    gap: 34px;
+  }
+
+  .hero-title {
+    font-size: clamp(3rem, 16vw, 4.8rem);
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-actions .button {
+    width: 100%;
+  }
+
+  .hero-photo-content strong {
+    font-size: .9rem;
+  }
+
+  .hero-photo-content span {
+    font-size: .52rem;
+  }
+
+  .section-pad {
+    padding: 72px 5vw;
+  }
+
+  .section-heading,
+  .about-content h2 {
+    margin-bottom: 42px;
+  }
+
+  .skill-node {
+    max-width: 25%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .contact-form-modal {
+    padding: 24px 18px;
+  }
+}
